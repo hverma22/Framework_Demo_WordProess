@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [AutomationFunctionalTestSuite]">
+  <test thread-count="5" name="WordPressApplicationTest(failed)">
+    <groups>
+      <run>
+        <include name="Functional"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.wordpress.qa.testcases.PostPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="endTest"/>
+          <include name="startTest"/>
+          <include name="tearDown"/>
+          <include name="searchPostTest"/>
+        </methods>
+      </class> <!-- com.wordpress.qa.testcases.PostPageTest -->
+    </classes>
+  </test> <!-- WordPressApplicationTest(failed) -->
+</suite> <!-- Failed suite [AutomationFunctionalTestSuite] -->

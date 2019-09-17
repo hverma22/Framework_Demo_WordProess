@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AutomationFunctionalTestSuite" parallel="none">
+    <!-- <listeners>
+            <listener class-name="com.wordpress.qa.util.ExtentReporterNG" />
+    </listeners> -->
+	<test name="WordPressApplicationTest" allow-return-values="true">
+	     <groups>
+         <run>
+            <include name = "Functional" />
+         </run>
+      </groups>
+		<classes>
+		    <!-- <class name="com.wordpress.qa.testcases.LoginPageTest"></class>
+		    <class name="com.wordpress.qa.testcases.HomePageTest"></class>
+		    <class name="com.wordpress.qa.testcases.NewPostPageTest"></class>
+		    <class name="com.wordpress.qa.testcases.AddNewUserPageTest"></class> -->
+		    <class name="com.wordpress.qa.testcases.PostPageTest"></class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
+	
