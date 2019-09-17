@@ -26,7 +26,7 @@ import com.wordpress.qa.util.TestUtil;
 import com.wordpress.qa.util.WebEventListener;
 
 /**
- * @author Hitendra Verma Comment added on 14th March'19 ===
+ * @author Hitendra Verma Comment added on 14th March'19 ====
  */
 public class TestBase {
 
