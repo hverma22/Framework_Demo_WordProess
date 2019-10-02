@@ -36,47 +36,48 @@ public class HomePageTest extends TestBase {
 		super();
 	}
 
-	@BeforeTest(groups = { "Smoke", "Regression" })
+	@BeforeTest(groups = { "Smoke", "Regression","SytemTest" })
 	public void startTest() {
 		ExtentClass.setExtent();
 	}
 
-	@BeforeMethod(groups = { "Regression", "Smoke" })
+	@BeforeMethod(groups = { "Regression", "Smoke","SytemTest" })
 	public void setup() throws Throwable {
 		initialization();
 		loginPage = new LoginPage();
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
 
-	@Test(groups = { "Regression" })
+	@Test(groups = { "Regression","SytemTest" })
 	public void homePageTitleTest() {
 		ExtentClass.extentTest = ExtentClass.extent.startTest("VerifyhomePageTitleTest");
 		String title = homePage.validateHomePageTitle();
 		Assert.assertEquals(title, "Dashboard ‹ opensourcecms — WordPress");
 	}
 
-	@Test(groups = { "Regression" })
+	@Test(groups = { "Regression","SytemTest" })
 	public void verifyUserNameTest() {
 		ExtentClass.extentTest = ExtentClass.extent.startTest("verifyUserNameTest");
 		boolean title = homePage.validateCorrectUsername();
 		Assert.assertTrue(title);
 	}
 
-	@Test(groups = { "Smoke" })
+	@Test(groups = { "Smoke","SytemTest" })
 	public void verifyAddNewPostLinkTest() throws Throwable {
 		ExtentClass.extentTest = ExtentClass.extent.startTest("verifyAddNewPostLinkTest");
 		newpostpage = homePage.clickOnAddNewLink();
 		Assert.assertTrue(newpostpage.postTitleIsdisplayed());
 	}
 
-	@AfterMethod(groups = { "Regression", "Smoke" })
+	@AfterMethod(groups = { "Regression", "Smoke","SytemTest" })
 	public void tearDown(ITestResult result) throws IOException {
 		ExtentClass.setResult(driver, result);
 		driver.quit();
 	}
 
-	@AfterTest(groups = { "Smoke", "Regression" })
+	@AfterTest(groups = { "Smoke", "Regression","SytemTest" })
 	public void endTest() {
 		ExtentClass.endExtent();
+		ExtentClass.closeExtent();
 	}
 }

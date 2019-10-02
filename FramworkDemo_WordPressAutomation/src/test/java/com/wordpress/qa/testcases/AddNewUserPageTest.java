@@ -37,12 +37,12 @@ public class AddNewUserPageTest extends TestBase {
 		super();
 	}
 
-	@BeforeTest(groups = { "Regression" })
+	@BeforeTest(groups = { "Regression","SytemTest" })
 	public void startTest() {
 		ExtentClass.setExtent();
 	}
 
-	@BeforeMethod(groups = { "Regression" })
+	@BeforeMethod(groups = { "Regression","SytemTest" })
 	public void setup() throws Throwable {
 		initialization();
 		loginPage = new LoginPage();
@@ -51,7 +51,7 @@ public class AddNewUserPageTest extends TestBase {
 		addnewuserpage = homePage.clickOnAddNewUser();
 	}
 
-	@Test(dataProvider = "getWordPressNewUserData", groups = { "Regression" })
+	@Test(dataProvider = "getWordPressNewUserData", groups = { "Regression","SytemTest" })
 	public void addNewUserTest(String username, String email, String fname, String lname, String url) throws Throwable {
 		ExtentClass.extentTest = ExtentClass.extent.startTest("verifyaddNewUserTest");
 		addnewuserpage.addNewUser(username, email, fname, lname, url);
@@ -66,15 +66,16 @@ public class AddNewUserPageTest extends TestBase {
 		return data;
 	}
 
-	@AfterMethod(groups = { "Regression" })
+	@AfterMethod(groups = { "Regression","SytemTest" })
 	public void tearDown(ITestResult result) throws IOException {
 		ExtentClass.setResult(driver, result);
 		driver.quit();
 	}
 
-	@AfterTest(groups = { "Regression" })
+	@AfterTest(groups = { "Regression","SytemTest" })
 	public void endTest() {
 		ExtentClass.endExtent();
+		ExtentClass.closeExtent();
 	}
 
 }

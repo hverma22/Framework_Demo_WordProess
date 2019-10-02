@@ -23,23 +23,23 @@ public class LoginPageTest extends TestBase {
 
 	LoginPage loginPage;
 	HomePage homePage;
-
+	
 	public LoginPageTest() {
 		super();
 	}
 
-	@BeforeTest(groups = { "Smoke", "Regression" })
+	@BeforeTest(groups = { "Smoke", "Regression","SytemTest" })
 	public void startTest() {
 		ExtentClass.setExtent();
 	}
 
-	@BeforeMethod(groups = { "Smoke", "Regression" })
+	@BeforeMethod(groups = { "Smoke", "Regression","SytemTest" })
 	public void setup() {
 		initialization();
 		loginPage = new LoginPage();
 	}
 
-	@Test(groups = { "Smoke" })
+	@Test(groups = { "Smoke","SytemTest" })
 	public void loginPageTitleTest() {
 		ExtentClass.extentTest = ExtentClass.extent.startTest("VerifyloginPageTitleTest");
 		String title = loginPage.validateLoginPageTitle();
@@ -47,28 +47,29 @@ public class LoginPageTest extends TestBase {
 
 	}
 
-	@Test(groups = { "Regression" })
+	@Test(groups = { "Regression","SytemTest" })
 	public void loginWordPresslogoTest() throws Throwable {
 		ExtentClass.extentTest = ExtentClass.extent.startTest("VerifyloginWordPresslogoTest");
 		boolean flag = loginPage.logo();
 		Assert.assertTrue(flag);
 	}
 
-	@Test(groups = { "Smoke" })
+	@Test(groups = { "Smoke","SytemTest" })
 	public void loginTest() throws Throwable {
 		ExtentClass.extentTest = ExtentClass.extent.startTest("VerifyloginTest");
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 		Assert.assertTrue(homePage.postLinkIsdisplayed());
 	}
 
-	@AfterMethod(groups = { "Smoke", "Regression" })
+	@AfterMethod(groups = { "Smoke", "Regression","SytemTest" })
 	public void tearDown(ITestResult result) throws IOException {
 		ExtentClass.setResult(driver, result);
 		driver.quit();
 	}
 
-	@AfterTest(groups = { "Smoke", "Regression" })
+	@AfterTest(groups = { "Smoke", "Regression","SytemTest" })
 	public void endTest() {
 		ExtentClass.endExtent();
+		ExtentClass.closeExtent();
 	}
 }

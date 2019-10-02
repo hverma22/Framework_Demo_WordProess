@@ -33,12 +33,12 @@ public class PostPageTest extends TestBase {
 		super();
 	}
 
-	@BeforeTest(groups = { "Functional" })
+	@BeforeTest(groups = { "Functional","SytemTest" })
 	public void startTest() {
 		ExtentClass.setExtent();
 	}
 
-	@BeforeMethod(groups = { "Functional" })
+	@BeforeMethod(groups = { "Functional","SytemTest" })
 	public void setup() throws Throwable {
 		initialization();
 		loginPage = new LoginPage();
@@ -47,21 +47,22 @@ public class PostPageTest extends TestBase {
 		postPage = homePage.clickOnPostLink();
 	}
 
-	@Test(groups = { "Functional" })
+	@Test(groups = { "Functional","SytemTest" })
 	public void searchPostTest() throws Throwable {
 		ExtentClass.extentTest = ExtentClass.extent.startTest("VerifyPostSearch");
 		Assert.assertEquals(postPage.searchPost(), "Hello world!");
 	}
 
-	@AfterMethod(groups = { "Functional" })
+	@AfterMethod(groups = { "Functional","SytemTest" })
 	public void tearDown(ITestResult result) throws IOException {
 		ExtentClass.setResult(driver, result);
 		driver.quit();
 	}
 
-	@AfterTest(groups = { "Functional" })
+	@AfterTest(groups = { "Functional","SytemTest" })
 	public void endTest() {
 		ExtentClass.endExtent();
+		ExtentClass.closeExtent();
 	}
 
 }

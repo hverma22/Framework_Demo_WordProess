@@ -2,6 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="AutomationTestSuite" parallel="none">
 	<test name="WordPressApplicationTest" allow-return-values="true">
+	<groups>
+         <run>
+            <include name = "SytemTest" />
+         </run>
+      </groups>
 		<classes>
 		    <class name="com.wordpress.qa.testcases.LoginPageTest"></class>
 		    <class name="com.wordpress.qa.testcases.HomePageTest"></class>

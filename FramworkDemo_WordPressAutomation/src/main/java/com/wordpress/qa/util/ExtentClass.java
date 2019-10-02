@@ -1,5 +1,6 @@
 package com.wordpress.qa.util;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
@@ -19,10 +20,15 @@ public class ExtentClass {
 		extent.addSystemInfo("Host Name", "Hitendra V");
 		extent.addSystemInfo("User Name", "HitendraVerma");
 		extent.addSystemInfo("Environment", "QA");
+		extent.loadConfig(new File(System.getProperty("user.dir")+"\\extent-config.xml"));
 	}
 
 	public static void endExtent() {
 		extent.flush();
+		//extent.close();
+	}
+	
+	public static void closeExtent() {
 		extent.close();
 	}
 
