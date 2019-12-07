@@ -2,62 +2,62 @@
 <testng-results skipped="0" failed="0" ignored="1" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="AutomationSmokeTestSuite" duration-ms="19911" started-at="2019-10-02T17:15:27Z" finished-at="2019-10-02T17:15:47Z">
+  <suite name="AutomationSmokeTestSuite" duration-ms="22064" started-at="2019-12-07T14:02:38Z" finished-at="2019-12-07T14:03:00Z">
     <groups>
       <group name="SytemTest">
-        <method signature="LoginPageTest.loginPageTitleTest()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@59ec2012]" name="loginPageTitleTest" class="com.wordpress.qa.testcases.LoginPageTest"/>
-        <method signature="LoginPageTest.loginTest()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@59ec2012]" name="loginTest" class="com.wordpress.qa.testcases.LoginPageTest"/>
+        <method signature="LoginPageTest.loginPageTitleTest()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@553f17c]" name="loginPageTitleTest" class="com.wordpress.qa.testcases.LoginPageTest"/>
+        <method signature="LoginPageTest.loginTest()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@553f17c]" name="loginTest" class="com.wordpress.qa.testcases.LoginPageTest"/>
       </group> <!-- SytemTest -->
       <group name="Smoke">
-        <method signature="LoginPageTest.loginPageTitleTest()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@59ec2012]" name="loginPageTitleTest" class="com.wordpress.qa.testcases.LoginPageTest"/>
-        <method signature="LoginPageTest.loginTest()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@59ec2012]" name="loginTest" class="com.wordpress.qa.testcases.LoginPageTest"/>
+        <method signature="LoginPageTest.loginPageTitleTest()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@553f17c]" name="loginPageTitleTest" class="com.wordpress.qa.testcases.LoginPageTest"/>
+        <method signature="LoginPageTest.loginTest()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@553f17c]" name="loginTest" class="com.wordpress.qa.testcases.LoginPageTest"/>
       </group> <!-- Smoke -->
     </groups>
-    <test name="WordPressApplicationTest" duration-ms="19911" started-at="2019-10-02T17:15:27Z" finished-at="2019-10-02T17:15:47Z">
+    <test name="WordPressApplicationTest" duration-ms="22064" started-at="2019-12-07T14:02:38Z" finished-at="2019-12-07T14:03:00Z">
       <class name="com.wordpress.qa.testcases.LoginPageTest">
-        <test-method status="PASS" signature="startTest()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@59ec2012]" name="startTest" is-config="true" duration-ms="231" started-at="2019-10-02T17:15:27Z" finished-at="2019-10-02T17:15:27Z">
+        <test-method status="PASS" signature="startTest()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@553f17c]" name="startTest" is-config="true" duration-ms="357" started-at="2019-12-07T14:02:38Z" finished-at="2019-12-07T14:02:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@59ec2012]" name="setup" is-config="true" duration-ms="7152" started-at="2019-10-02T17:15:27Z" finished-at="2019-10-02T17:15:35Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@553f17c]" name="setup" is-config="true" duration-ms="8099" started-at="2019-12-07T14:02:38Z" finished-at="2019-12-07T14:02:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="loginPageTitleTest()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@59ec2012]" name="loginPageTitleTest" duration-ms="46" started-at="2019-10-02T17:15:35Z" finished-at="2019-10-02T17:15:35Z">
+        <test-method status="PASS" signature="loginPageTitleTest()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@553f17c]" name="loginPageTitleTest" duration-ms="31" started-at="2019-12-07T14:02:46Z" finished-at="2019-12-07T14:02:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPageTitleTest -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@59ec2012]" name="tearDown" is-config="true" duration-ms="1094" started-at="2019-10-02T17:15:35Z" finished-at="2019-10-02T17:15:36Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@553f17c]" name="tearDown" is-config="true" duration-ms="1268" started-at="2019-12-07T14:02:46Z" finished-at="2019-12-07T14:02:47Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginPageTitleTest status=SUCCESS method=LoginPageTest.loginPageTitleTest()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@59ec2012] output={null}]]]>
+                <![CDATA[[TestResult name=loginPageTitleTest status=SUCCESS method=LoginPageTest.loginPageTitleTest()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@553f17c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@59ec2012]" name="setup" is-config="true" duration-ms="6463" started-at="2019-10-02T17:15:36Z" finished-at="2019-10-02T17:15:42Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@553f17c]" name="setup" is-config="true" duration-ms="6054" started-at="2019-12-07T14:02:47Z" finished-at="2019-12-07T14:02:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="loginTest()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@59ec2012]" name="loginTest" duration-ms="3499" started-at="2019-10-02T17:15:42Z" finished-at="2019-10-02T17:15:46Z">
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@553f17c]" name="loginTest" duration-ms="5057" started-at="2019-12-07T14:02:53Z" finished-at="2019-12-07T14:02:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@59ec2012]" name="tearDown" is-config="true" duration-ms="1023" started-at="2019-10-02T17:15:46Z" finished-at="2019-10-02T17:15:47Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@553f17c]" name="tearDown" is-config="true" duration-ms="620" started-at="2019-12-07T14:02:59Z" finished-at="2019-12-07T14:02:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginTest status=SUCCESS method=LoginPageTest.loginTest()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@59ec2012] output={null}]]]>
+                <![CDATA[[TestResult name=loginTest status=SUCCESS method=LoginPageTest.loginTest()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@553f17c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@59ec2012]" name="endTest" is-config="true" duration-ms="373" started-at="2019-10-02T17:15:47Z" finished-at="2019-10-02T17:15:47Z">
+        <test-method status="PASS" signature="endTest()[pri:0, instance:com.wordpress.qa.testcases.LoginPageTest@553f17c]" name="endTest" is-config="true" duration-ms="545" started-at="2019-12-07T14:02:59Z" finished-at="2019-12-07T14:03:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->

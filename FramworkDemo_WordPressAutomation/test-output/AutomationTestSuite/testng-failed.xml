@@ -2,16 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [AutomationTestSuite]">
   <test thread-count="5" name="WordPressApplicationTest(failed)">
+    <groups>
+      <run>
+        <include name="SytemTest"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.wordpress.qa.testcases.NewPostPageTest">
-        <methods>
-          <include name="setup"/>
-          <include name="addNewPostTest"/>
-          <include name="tearDown"/>
-          <include name="endTest"/>
-          <include name="startTest"/>
-        </methods>
-      </class> <!-- com.wordpress.qa.testcases.NewPostPageTest -->
       <class name="com.wordpress.qa.testcases.PostPageTest">
         <methods>
           <include name="setup"/>
@@ -21,15 +17,15 @@
           <include name="searchPostTest"/>
         </methods>
       </class> <!-- com.wordpress.qa.testcases.PostPageTest -->
-      <class name="com.wordpress.qa.testcases.AddNewUserPageTest">
+      <class name="com.wordpress.qa.testcases.NewPostPageTest">
         <methods>
           <include name="setup"/>
+          <include name="addNewPostTest"/>
           <include name="tearDown"/>
           <include name="endTest"/>
-          <include name="addNewUserTest" invocation-numbers="0"/>
           <include name="startTest"/>
         </methods>
-      </class> <!-- com.wordpress.qa.testcases.AddNewUserPageTest -->
+      </class> <!-- com.wordpress.qa.testcases.NewPostPageTest -->
     </classes>
   </test> <!-- WordPressApplicationTest(failed) -->
 </suite> <!-- Failed suite [AutomationTestSuite] -->

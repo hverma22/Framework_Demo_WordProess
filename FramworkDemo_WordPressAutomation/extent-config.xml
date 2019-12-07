@@ -19,7 +19,7 @@
         <!-- report name - displayed at top-nav -->
         <reportName>WordPressProject Report
          <![CDATA[
-                <img src='D:\Framework_Demo_WordProess\FramworkDemo_WordPressAutomation\src\main\java\com\wordpress\qa\testdata\ATI.png'/>
+                <img src='D:\Workspace_Eclipse\Framework_Demo_WordProess\FramworkDemo_WordPressAutomation\src\main\java\com\wordpress\qa\testdata\ATI.png'/>
             ]]>
         </reportName>
         
