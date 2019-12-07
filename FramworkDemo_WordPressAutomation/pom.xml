@@ -85,7 +85,7 @@
 				<version>2.19.1</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>D:\Framework_Demo_WordPressAutomation\All_testng.xml</suiteXmlFile>
+						<suiteXmlFile>D:\Workspace_Eclipse\Framework_Demo_WordProess\FramworkDemo_WordPressAutomation\All_testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>

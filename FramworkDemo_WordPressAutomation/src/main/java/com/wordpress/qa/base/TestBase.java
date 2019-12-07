@@ -66,11 +66,13 @@ public class TestBase {
 			System.setProperty("webdriver.gecko.driver",
 					System.getProperty("user.dir") + "/Drivers/geckodriver.exe");
 			
-			// driver = new FirefoxDriver();
+			driver = new FirefoxDriver();
 
-			DesiredCapabilities caps = DesiredCapabilities.firefox();
-			caps.setCapability("acceptInsecureCerts", true);
-			driver = new FirefoxDriver(caps);
+			/*
+			 * DesiredCapabilities caps = DesiredCapabilities.firefox();
+			 * caps.setCapability("acceptInsecureCerts", true); driver = new
+			 * FirefoxDriver(caps);
+			 */
 
 		}
 

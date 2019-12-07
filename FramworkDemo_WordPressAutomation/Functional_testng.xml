@@ -5,17 +5,16 @@
             <listener class-name="com.wordpress.qa.util.ExtentReporterNG" />
     </listeners> -->
 	<test name="WordPressApplicationTest" allow-return-values="true">
-	     <groups>
+	    <groups>
          <run>
             <include name = "Functional" />
          </run>
       </groups>
 		<classes>
-		    <!-- <class name="com.wordpress.qa.testcases.LoginPageTest"></class>
-		    <class name="com.wordpress.qa.testcases.HomePageTest"></class>
+		    <class name="com.wordpress.qa.testcases.PostPageTest"></class>
+		    <!-- <class name="com.wordpress.qa.testcases.HomePageTest"></class>
 		    <class name="com.wordpress.qa.testcases.NewPostPageTest"></class>
 		    <class name="com.wordpress.qa.testcases.AddNewUserPageTest"></class> -->
-		    <class name="com.wordpress.qa.testcases.PostPageTest"></class>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

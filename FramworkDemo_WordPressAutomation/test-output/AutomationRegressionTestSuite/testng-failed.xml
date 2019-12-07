@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [AutomationRegressionTestSuite]">
-  <listeners>
-    <listener class-name="com.wordpress.qa.util.ExtentReporterNG"/>
-  </listeners>
   <test thread-count="5" name="WordPressApplicationTest(failed)">
     <groups>
       <run>
@@ -11,28 +8,24 @@
       </run>
     </groups>
     <classes>
+      <class name="com.wordpress.qa.testcases.AddNewUserPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="endTest"/>
+          <include name="addNewUserTest" invocation-numbers="0"/>
+          <include name="startTest"/>
+        </methods>
+      </class> <!-- com.wordpress.qa.testcases.AddNewUserPageTest -->
       <class name="com.wordpress.qa.testcases.NewPostPageTest">
         <methods>
           <include name="setup"/>
           <include name="addNewPostTest"/>
           <include name="tearDown"/>
+          <include name="endTest"/>
+          <include name="startTest"/>
         </methods>
       </class> <!-- com.wordpress.qa.testcases.NewPostPageTest -->
-      <class name="com.wordpress.qa.testcases.AddNewUserPageTest">
-        <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="addNewUserTest" invocation-numbers="0 1"/>
-        </methods>
-      </class> <!-- com.wordpress.qa.testcases.AddNewUserPageTest -->
-      <class name="com.wordpress.qa.testcases.HomePageTest">
-        <methods>
-          <include name="homePageTitleTest"/>
-          <include name="verifyUserNameTest"/>
-          <include name="tearDown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.wordpress.qa.testcases.HomePageTest -->
     </classes>
   </test> <!-- WordPressApplicationTest(failed) -->
 </suite> <!-- Failed suite [AutomationRegressionTestSuite] -->
