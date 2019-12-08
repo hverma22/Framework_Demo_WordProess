@@ -16,7 +16,7 @@ import com.wordpress.qa.base.TestBase;
  */
 public class PostPage extends TestBase {
 	
-	@FindBy(xpath = "//*[@id='post-1']/td[1]/strong/a")
+	@FindBy(xpath = "//a[contains(text(),'Hello world!')]")
 	WebElement helloWorldPost;
 	
 	@FindBy(xpath = "//*[@id='post-search-input']")

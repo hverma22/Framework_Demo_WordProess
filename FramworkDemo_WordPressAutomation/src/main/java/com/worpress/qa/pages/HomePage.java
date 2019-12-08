@@ -25,10 +25,10 @@ public class HomePage extends TestBase {
 	@FindBy(xpath="//*[@id='menu-posts']/a/div[contains(text(),'Posts')]")
 	WebElement PostLink;
 	
-	@FindBy(xpath="//*[@id='menu-users']/a")
+	@FindBy(xpath="//div[contains(text(),'Users')]")
 	WebElement usersLink;
 	
-	@FindBy(xpath="//*[@id='menu-users']/ul/li[3]/a")
+	@FindBy(xpath="//*[@id='menu-users']//a[contains(text(),'Add New')]")
 	WebElement addNewUserLink;
 	
 	public HomePage() {

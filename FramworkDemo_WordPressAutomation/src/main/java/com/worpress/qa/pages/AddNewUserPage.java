@@ -46,7 +46,7 @@ public class AddNewUserPage extends TestBase {
 	@CacheLookup
 	WebElement checkUser;
 	
-	@FindBy(xpath = "//*[@id='createuser']/table/tbody/tr[6]/td/button")
+	@FindBy(xpath = "//button[contains(text(),'Show password')]")
 	WebElement showPassword;
 	
 	@FindBy(xpath = "//*[@id='pass1-text']")
