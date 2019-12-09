@@ -9,8 +9,9 @@ import org.testng.ITestResult;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+import com.wordpress.qa.base.TestBase;
 
-public class ExtentClass {
+public class ExtentClass extends TestBase {
 	public static ExtentReports extent;
 	public static ExtentTest extentTest;
 
@@ -20,6 +21,7 @@ public class ExtentClass {
 		extent.addSystemInfo("Host Name", "Hitendra V");
 		extent.addSystemInfo("User Name", "HitendraVerma");
 		extent.addSystemInfo("Environment", "QA");
+		extent.addSystemInfo("Browser", prop.getProperty("browser"));
 		extent.loadConfig(new File(System.getProperty("user.dir")+"\\extent-config.xml"));
 	}
 
