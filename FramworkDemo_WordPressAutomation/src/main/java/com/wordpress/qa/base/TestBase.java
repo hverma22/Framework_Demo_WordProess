@@ -2,15 +2,13 @@
  * 
  */
 package com.wordpress.qa.base;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.LogManager;
-
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxBinary;
@@ -20,10 +18,9 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
-import org.testng.log4testng.Logger;
-
 import com.wordpress.qa.util.TestUtil;
 import com.wordpress.qa.util.WebEventListener;
+import org.apache.log4j.PropertyConfigurator;
 
 /**
  * @author Hitendra Verma Comment added on 14th March'19 ====
@@ -34,6 +31,8 @@ public class TestBase {
 	public static Properties prop;
 	public static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
+	public Logger log = Logger.getLogger("WordPressProject");
+	
 
 	public TestBase() {
 		try {
@@ -54,13 +53,13 @@ public class TestBase {
 	}
 
 	public static void initialization() {
-
 		String browsername = prop.getProperty("browser");
 		System.out.println(browsername);
 		if (browsername.equalsIgnoreCase("Chrome")) {
 			System.setProperty("webdriver.chrome.driver",
 					System.getProperty("user.dir") + "/Drivers/chromedriver.exe");
 			driver = new ChromeDriver();
+			PropertyConfigurator.configure("log4j.properties");
 
 		} else if (browsername.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver",

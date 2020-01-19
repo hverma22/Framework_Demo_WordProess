@@ -24,6 +24,7 @@ public class LoginPageTest extends TestBase {
 	LoginPage loginPage;
 	HomePage homePage;
 	
+	
 	public LoginPageTest() {
 		super();
 	}
@@ -42,23 +43,29 @@ public class LoginPageTest extends TestBase {
 	@Test(groups = { "Smoke","SytemTest" })
 	public void loginPageTitleTest() {
 		ExtentClass.extentTest = ExtentClass.extent.startTest("VerifyloginPageTitleTest");
+		log.debug("loginPageTitleTest start");
+		log.info("Login");
 		String title = loginPage.validateLoginPageTitle();
 		Assert.assertEquals(title, "Log In ‹ opensourcecms — WordPress");
-
+		log.debug("loginPageTitleTest ends");
 	}
 
 	@Test(groups = { "Regression","SytemTest" })
 	public void loginWordPresslogoTest() throws Throwable {
+		log.debug("loginWordPresslogoTest start");
 		ExtentClass.extentTest = ExtentClass.extent.startTest("VerifyloginWordPresslogoTest");
 		boolean flag = loginPage.logo();
 		Assert.assertTrue(flag);
+		log.debug("loginWordPresslogoTest ends");
 	}
 
 	@Test(groups = { "Smoke","SytemTest" })
 	public void loginTest() throws Throwable {
+		log.debug("loginTest Start");
 		ExtentClass.extentTest = ExtentClass.extent.startTest("VerifyloginTest");
 		homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 		Assert.assertTrue(homePage.postLinkIsdisplayed());
+		log.debug("loginTest ends");
 	}
 
 	@AfterMethod(groups = { "Smoke", "Regression","SytemTest" })

@@ -85,12 +85,9 @@ public class TestUtil extends TestBase {
 			// Create a loop to print cell values in a row
 
 			for (int j = 0; j < excelSheet.getRow(0).getLastCellNum(); j++) {
-
 				// Print Excel data in console
-
 				// System.out.print(row.getCell(j).getStringCellValue() + "|| ");
 				data[i][j] = excelSheet.getRow(i + 1).getCell(j).toString();
-
 			}
 		}
 		return data;
