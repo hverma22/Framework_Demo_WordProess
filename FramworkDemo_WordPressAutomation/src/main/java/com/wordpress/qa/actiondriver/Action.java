@@ -53,12 +53,9 @@ public class Action extends TestBase {
 		} finally {
 			if (flag) {
 				System.out.println("Successfully Found element at");
-				// SuccessReport("FindElement", "Successfully Found element at:
-				// \""+locatorName+"\"");
-				// return true;
+	
 			} else {
 				System.out.println("Unable to locate element at");
-				// failureReport("Click", "Unable to locate element at: \""+ locatorName+"\"");
 			}
 		}
 		return flag;
